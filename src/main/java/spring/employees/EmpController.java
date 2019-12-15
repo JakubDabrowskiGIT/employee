@@ -33,7 +33,7 @@ public class EmpController {
 
     @RequestMapping(value = "/save_emp")
     public ModelAndView save(@ModelAttribute(value = "emp") Emp emp) {
-        if (emp.getId() < 0) {
+        if (emp.getId() == 0) {
             System.out.println("Adding a new emp");
             emp.setId(list.size() + 1);
             list.add(emp);
